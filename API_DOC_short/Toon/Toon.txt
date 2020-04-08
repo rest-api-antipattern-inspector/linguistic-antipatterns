@@ -1,0 +1,26 @@
+GET >> /v3/{agreementId}/production/electricity/flows >> Get electricity production flow data.
+GET >> /v3/{agreementId}/production/electricity/data >> Get electricity production historical data.
+GET >> /v3/{agreementId}/production/electricity/graph >> Get electricity production historical data.
+GET >> /v3/{agreementId}/production/electricity/delivery >> Get electricity production data with the delivery to the grid.
+GET >> /v3/agreements >> Returns the agreementID(s) that are associated with the utility customer. The agreementID is used in subsequent calls to access the data of one particular Toon.
+GET >> /v3/{agreementId}/status >> Returns information about current power usage, gas usage, thermostat information and thermostat programs as well as connected devices.
+GET >> /v3/{agreementId}/consumption/gas/flows >> Returns the gas consumption for a given time period in 5 minute intervals. The data is given for the time period between the given from- and to Time parameters. If no parameters are specified, the default value will be used, which is the last 24 hours.
+GET >> /v3/{agreementId}/consumption/electricity/data >> Returns the electricity consumption for a given time period. The data is given in the interval you specify and for the time period between the given from- and toTime parameters. If no parameters are specified, the default values will be used.
+GET >> /v3/{agreementId}/consumption/districtheat/data >> Returns the district heat consumption for a given time period. The data is given in the interval you specify and for the time period between the given from- and toTime parameters. If no parameters are specified, the default values will be used.
+GET >> /v3/{agreementId}/consumption/electricity/flows >> Returns the electricity consumption for a given time period in 5 minute intervals. The data is given for the time period between the given from- and toTime parameters. The data will be returned in an array appended under the field hours.
+GET >> /v3/{agreementId}/consumption/gas/data >> Returns the gas consumption for a given time period. The data is given in the interval you specify and for the time period between the given from- and toTime parameters. If no parameters are specified, the default values will be used.
+DELETE >> /v3/{agreementId}/webhooks/{applicationId} >> The operation allows an API client to unsubscribe a push event request
+GET >> /v3/{agreementId}/webhooks >> Get list of webhooks for current client id to provided display
+POST >> /v3/{agreementId}/webhooks >> The operation allows an API client to subscribe a push event request, which will permit to get the display status including all datasets via a push event whenever display sends an update to the backend API
+GET >> /v3/{agreementId}/thermostat/programs >> Returns the different programs that are configured on the display. This regulates what the temperature will be at a certain time period. The programs indicate the time period, while also containing the used temperature state at that time. 
+PUT >> /v3/{agreementId}/thermostat/programs >> This method is currently not implemented.
+PUT >> /v3/{agreementId}/thermostat/states >> With this method you can change the different thermostat states that are available for programming. In other words you can change the temperature value of Thuis, Weg, Slapen and Comfort.
+GET >> /v3/{agreementId}/thermostat/states >> Returns the different temperature state (setting) for the display. The temperature programs define in what state the display will go at a certain time and the state then defines the temperature value to use.
+PUT >> /v3/{agreementId}/thermostat >> Change the thermostat information
+GET >> /v3/{agreementId}/thermostat >> Gets the current thermostat information
+GET >> /v3/{agreementId}/devices/{deviceid} >> Returns information about the device that belongs to the supplied device id. The device id can contain special characters that must be URL encoded.
+PUT >> /v3/{agreementId}/devices/{deviceid} >> You need to send the configuration of the specific device as body. This configuration can be copied directly from the result from the corresponding GET. The device id can contain special characters that must be URL encoded.
+GET >> /v3/{agreementId}/devices/{deviceid}/data >> Can be used to retrieve the historical data for a connected device. The device id can contain special characters that must be URL encoded.
+GET >> /v3/{agreementId}/devices >> Returns a list of all the connected devices and their configuration. These can be Smart Plugs, Philips Hues, etc.
+PUT >> /v3/{agreementId}/devices/{deviceid}/flows >> Can be used to update the configuration of all connected devices. You need to send the complete array of devices as body. The body can be copied directly from the result from GET /devices.
+GET >> /v3/{agreementId}/devices/{deviceid}/flows >> Can be used to retrieve the current data for a connected device. The device id can contain special characters that must be URL encoded.

@@ -1,0 +1,7 @@
+/api/v1.0/users/{phonenumber}/contacts
+/api/v1.0/users/{phonenumber}/mutualcontacts/
+/api/v1.0/users/{phonenumber}/mutualcontacts/{mutualcontact}
+/api/v1.0/users/{phonenumber}/context
+/api/v1.0/users/{phonenumber}/geoloc
+/api/v1.0/users/{phonenumber}/status
+/api/v1.0/users/{phonenumber}/status

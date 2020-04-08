@@ -1,0 +1,137 @@
+GET >> /users/self >> Get the current user's profile. Returns the current user's profile. The user must be authenticated with a bearer access token.
+GET >> /users/<userID>/properties >> Returns the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are searched is the application linked to the Authorization token.
+POST >> /users/<userID>/properties >> Specifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are created is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
+PUT >> /users/<userID>/properties >> Modifies the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are updated is the application linked to the Authorization token and MUST be the same as the aid parameter sent in the JSON Payload.
+DELETE >> /users/<userID>/properties >> Deletes the properties of a user's application. The call must be authenticated with a valid Authorization header. The application for which the properties are deleted is the application linked to the Authorization token.
+GET >> /users/<userID>/devices >> Returns all devices owned by a user and/or shared devices on the user's account.
+GET >> /users/<userID>/devicetypes >> Returns the device types owned by a user.
+GET >> /users/<userID>/rules >> Returns the user's Rules created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+GET >> /users/<userID>/scenes >> Returns the user's Scenes created by the current application. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+GET >> /users/<userID>/trials >> Returns the trials of a participant or administrator.
+GET >> /devices/<deviceID> >> Returns a specific shared or owned device. Required permissions: READ on the device.
+POST >> /devices >> Adds a device.
+PUT >> /devices/<deviceID> >> Modifies a device's parameters.
+DELETE >> /devices/<deviceID> >> Deletes a device.
+GET >> /devices/<deviceID>/tokens >> Returns the access token of a device.
+PUT >> /devices/<deviceID>/tokens >> Creates a new access token for a device.
+DELETE >> /devices/<deviceID>/tokens >> Deletes the access token of a device.
+POST >> /devices/<deviceID>/providerauth >> Begins an authentication flow to grant ARTIK cloud services permissions to access a device's data on a third-party cloud. There are two ways to authenticate a Cloud Connector device. One way is to have the user provide authorization on My ARTIK Cloud. The second way is to perform the authorization within the third-party app. The app initiates the authorization by calling the API documented here. The application calling this API must support interactive redirects. This call triggers a sequence of redirections between ARTIK cloud services, the third-party cloud, and the application.
+DELETE >> /devices/<deviceID>/providerauth >> Removes the stored third-party credentials and revokes all subscriptions for the device on ARTIK cloud services. After performing this call, ARTIK cloud services may no longer communicate with the third-party cloud to receive data for this device.
+GET >> /devices/<deviceID>/status >> Returns current status of a device.
+GET >> /devices/status >> Returns a list of device statuses.
+PUT >> /devices/<deviceID>/status >> Modifies current status of a device.
+GET >> /devices/<deviceID>/certificate >> Returns fields for a device's certificates.
+GET >> /devices/<deviceID>/shares >> Returns all device shares for a device ID. Required permissions: READ on user (device owner) and READ on device.
+GET >> /devices/<deviceID>/shares/<shareID> >> Returns a device share. Required permissions: READ on user (device owner) and READ on device.
+POST >> /devices/<deviceID>/shares >> Shares a device with a recipient. Required permissions: WRITE on user (device owner) and WRITE on device.
+GET >> /users/<userID>/shares >> List all devices shared with a user. Required permissions: READ on user (device share recipient) or READ on devices owned by user (device share recipient).
+GET >> /devicetypes/<deviceTypeID> >> Returns the device type of a device.
+GET >> /devicetypes/<deviceTypeID> >> Returns a list of device types.
+GET >> /devicetypes/<deviceTypeID>/manifests/latest/properties >> Returns the properties for the latest Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
+GET >> /devicetypes/<deviceTypeID>/manifests/<version>/properties >> Returns the properties for a specific Manifest version. This will return metadata about the Manifest, such as the fields and the units they are expressed in.
+GET >> /devicetypes/<deviceTypeID>/availablemanifestversions >> Returns the available Manifest versions for a device type.
+POST >> /devicetypes/<deviceTypeId>/whitelist >> Uploads an Approved List as a CSV file.
+GET >> /devicetypes/<deviceTypeId>/whitelist/<uploadId>/status >> Returns the status of an uploaded CSV.
+GET >> /devicetypes/<deviceTypeId>/whitelist/<uploadId>/rejectedRows >> Returns the rows that were rejected in an uploaded CSV.
+GET >> /devicetypes/<deviceTypeId>/whitelist >> Returns the Approved List for a device type.
+DELETE >> /devicetypes/<deviceTypeID>/whitelist/<vendorDeviceID> >> Deletes a specified device from a device type's Approved List.
+PUT >> /devicetypes/<deviceTypeID>/whitelist/enable >> Enables or disables a device type's Approved List.
+POST >> /devicetypes/<deviceTypeID>/whitelist/certificates >> Uploads a Public X.509 certificate for a device type. This is required for device types that are not securely registered. Read the documentation for details.
+DELETE >> /devicetypes/<deviceTypeID>/whitelist/certificates/<certificateID> >> Deletes an Approved List certificate for a device type.
+GET >> /devicetypes/<deviceTypeID>/whitelist/status >> Returns the enabled/disabled status of an Approved List.
+GET >> /devicetypes/<deviceTypeID>/whitelist/certificates >> Returns details of an Approved List certificate.
+GET >> /devicetypes/<deviceTypeID>/whitelist/vdid/<vendorDeviceID> >> Returns a specified vendor device ID.
+POST >> /messages >> Sends a message. 
+GET >> /messages >> Returns normalized messages, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS. Get by device sdid, endDate, startDate. Get by message ID mid, uid (required for applications only) Get by device and field presence sdid, fieldPresence Get by device, filter and date range sdid, filter, endDate, startDate Common parameters order, count, offset
+POST >> /actions >> Sends an Action to the specified device.
+GET >> /actions >> Returns normalized Actions, according to one of the following parameter combinations: COMBINATION REQUIRED PARAMETERS Get by device and date range ddid, endDate, startDate Get by message ID mid, uid (required for applications only) Get by Action and date range action, ddid, endDate, startDate Common parameters order, count, offset
+GET >> /messages/last >> Returns the most recent normalized messages from a device or devices.
+GET >> /messages/analytics/aggregates >> Returns the sum, minimum, maximum, mean and count of message fields that are numerical. This call generates results on messages that are at least 1 minute old. Values for startDate and endDate are rounded to start of minute, and the date range between startDate and endDate is restricted to 31 days max.
+GET >> /messages/analytics/histogram >> Returns message aggregates over equal intervals, which can be used to draw a histogram. This call generates results on messages that are at least 1 minute old. For each interval, the sum, minimum, maximum, mean, count and variance of message fields are returned.
+GET >> /messages/presence >> Returns presence of normalized messages.
+GET >> /messages/snapshots >> Returns last received value for all Manifest fields (aka device state) of a device or devices.
+GET >> /pricing/devices/<deviceID>/revenueshare/upgradepath >> If a user's device is using a Monetization plan that can be upgraded, returns a URL to be called by an application working with the device. The URL opens a UI to one of three phases of the upgrade flow. This endpoint accepts a user token as the access token.
+GET >> /pricing/devicetypes/<deviceTypeID>/pricingtiers >> Returns Monetization Tiers (if any) of a device type. This endpoint accepts a user token as the access token.
+GET >> /pricing/devices/<deviceID>/pricingtiers >> Returns Monetization Tiers (if any) of a device. This endpoint accepts a user token as the access token.
+POST >> /messages/export >> Exports normalized messages from up to 30 days, according to one of the following parameter combinations. The maximum duration between startDate and endDate is 31 days. A confirmation message is emailed when the export request has been processed. Data can be exported in JSON or simple CSV. CSV exports sort the message metadata into separate columns and the data payload into a unique column.
+GET >> /messages/export/<exportID>/status >> Returns the status of the messages export.
+GET >> /messages/export/<exportID>/result >> Returns the result of the export query. The result call returns the response in tgz format.
+GET >> /messages/export/history >> Returns a list of export queries that have been performed.
+POST >> /subscriptions >> Subscribes a client to receive notifications of messages for a user's devices. The devices are specified according to one of the following parameter combinations.
+GET >> /subscriptions >> Returns all subscriptions for the current application. This call accepts application tokens as the access token.
+GET >> /subscriptions/<subscriptionID> >> Returns a subscription. This call accepts application and user tokens as the access token.
+POST >> /subscriptions/<subscriptionID>/validate >> Validates a subscription with ARTIK cloud services. If successful, subscription will be set to active status. This call does not require an access token.
+GET >> /notifications/<notificationID>/messages >> Returns messages associated with a notification. The notification ID is obtained from the notification payload sent to the client's callback URL. This call accepts application and user tokens as the access token.
+GET >> /rules/<ruleID> >> Returns a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+POST >> /rules >> Adds a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+PUT >> /rules/<ruleID> >> Modifies parameters of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+DELETE >> /rules/<ruleID> >> Deletes a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+GET >> /rules/<ruleID>/executions >> Returns statistics for executions of a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has READ on source device and WRITE on target device of Rule.
+POST >> /rules/<ruleID>/actions >> Runs an Action in a Rule. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on target device of Rule. Any testable Actions will actually be sent to your device, so be prepared! An Action is testable if the definition of the Action is static.
+GET >> /rules/<ruleID>/actions >> Checks whether at least one Action can be run for test. This call accepts application and user tokens as the access token.
+POST >> /scenes >> Creates a Scene with Actions specified for one or more devices. This call accepts application and user tokens as the access token.
+PUT >> /scenes/<sceneID> >> Modifies the parameters of a Scene (with the exception of uid). This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on Scene device type and WRITE on devices used in the Scene.
+GET >> /scenes/<sceneID> >> Returns a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+GET >> /scenes >> Returns a list of Scenes created by the current application. This call accepts a user token as the access token. Required permissions: Application has READ on Scene device type and WRITE on devices used in the Scene.
+DELETE >> /scenes/<sceneID> >> Deletes a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
+POST >> /scenes/<sceneID> >> Runs the Actions in a Scene. This call accepts application and user tokens as the access token. Required permissions: Application has WRITE on devices used in the Scene.
+POST >> /ml/models >> Creates a prediction or anomaly detection model that learns a device's data usage. Required permissions: Application has READ on source device specified in the model.
+POST >> /ml/models/<modelID>/predict >> Returns the predicted output for a machine learning model.
+GET >> /ml/models/<modelID> >> Returns a model.
+DELETE >> /ml/models/<modelID> >> Deletes a model.
+GET >> /ml/models >> Returns all models of an application.
+POST >> /devicemgmt/devices/<deviceID>/serverproperties >> Writes Server Properties for a device. This call accepts the following as the access token: The device token. The user token belonging to the device owner, or to an administrator of the device type's organization (in applications created by the device type's organization). An application token created by the device type's organization.
+GET >> /devicemgmt/devices/<deviceID>/properties >> Reads properties for a device. This call accepts the following as the access token: The device token. The user token belonging to the device owner, or to an administrator of the device type's organization (in applications created by the device type's organization). An application token created by the device type's organization.
+GET >> /devicemgmt/devices/properties >> Queries and returns properties across devices. This call accepts the following as the access token: The user token belonging to an administrator of the device type's organization (in applications created by the device type's organization). An application token created by the device type's organization.
+DELETE >> /devicemgmt/devices/<deviceID>/serverproperties >> Deletes all Server Properties associated with the device. The System Properties will remain. This call accepts the following as the access token: The device token. The user token belonging to the device owner, or to an administrator of the device type's organization (in applications created by the device type's organization). An application token created by the device type's organization.
+GET >> /devicemgmt/devicetypes/<devicetypeID>/manifest/properties >> Returns the properties of a Device Management Manifest for a device type. The response includes the Server Properties defined by the device type owner. If Device Properties are enabled, they will also be included in the response payload.
+GET >> /devicemgmt/devicetypes/<devicetypeID> >> Returns the device management configuration of a device type.
+PUT >> /devicemgmt/devicetypes/<devicetypeID> >> Modifies the device management configuration of a device type.
+POST >> /devicemgmt/tasks >> Creates a new task for one or more devices of a single device type.
+GET >> /devicemgmt/tasks/<taskID> >> Returns a task, its task status, and device task status counts.
+GET >> /devicemgmt/tasks >> Returns all tasks for a device type.
+GET >> /devicemgmt/tasks/<taskID>/statuses >> Returns a task, its task status, device task status counts, and individual device task statuses.
+POST >> /devicemgmt/tasks/<taskID>/devices/<deviceID>/acceptance >> Informs ARTIK cloud services that a user has accepted/rejected an OTA Update task.
+GET >> /devicemgmt/devices/<deviceID>/tasks >> Returns tasks for a device ID.
+GET >> /devicemgmt/devices/<deviceID>/pendingtasks >> Returns OTA Update tasks that require user acceptance and are pending a response.
+PUT >> /devicemgmt/tasks/<taskID> >> Cancels a task. Only affects devices that have not completed the task.
+PUT >> /devicemgmt/tasks/<taskID>/devices/<deviceID> >> Cancels a single device in a task. Only affects devices that have not completed the task.
+POST >> /trials >> Adds a trial. Device types and invitations may be included in the call. See Add a trial device type and Create a trial invitation for the request formats.
+DELETE >> /trials/<trialID> >> Deletes a trial and its invitations, administrators, participants and connected devices. Can be called by a trial administrator only.
+GET >> /trials/<trialID> >> Returns a trial. Can be called by trial administrators and participants. Only administrators will see aid and clientSecret.
+PUT >> /trials/<trialID> >> Modifies the parameters of a trial. Can be called by a trial administrator only.
+PUT >> /trials/<trialID>/application >> Updates the trial with a new application. This can be used if the client secret of the existing application is exposed. A new aid and clientSecret will be generated. Can be called by a trial administrator only.
+POST >> /trials/<trialID>/devicetypes >> Add a device type to the trial device types list. Can be called by a trial administrator only.
+POST >> /trials/<trialID>/participants/<userID>/devices >> Connects a participant device to the trial. Can be called by a trial participant only.
+DELETE >> /trials/<trialID>/participants/<userID>/devices/<deviceID> >> Disconnects a participant device from the trial. Can be called by a trial participant only.
+GET >> /trials/<trialID>/devices >> Returns all devices connected to a trial. Can be called by a trial administrator only.
+GET >> /trials/<trialID>/devicetypes >> Returns all device types in a trial. Can be called by trial administrators and participants.
+GET >> /trials/<trialID>/participants/<userID>/devices >> Returns all devices connected by a participant to a trial. Can be called by trial administrators and participants.
+POST >> /trials/<trialID>/invitations >> Sends a new trial invitation. The invitation will be active for 24 hours. Can be called by a trial administrator only.
+DELETE >> /trials/<trialID>/administrators/<userID> >> Removes an administrator from a trial. Can be called by a trial administrator only.
+DELETE >> /trials/<trialID>/invitations/<invitationID> >> Removes an invitation from a trial. This only applies to invitations with a status of sent. Can be called by a trial administrator only.
+DELETE >> /trials/<trialID>/participants/<userID> >> Removes a participant from a trial and disconnects their devices. Participant's data can no longer be accessed by trial administrators. Can be called by a trial administrator only.
+GET >> /trials/<trialID>/administrators >> Returns all the administrators of a trial. Can be called by a trial administrator only.
+GET >> /trials/<trialID>/invitations >> Returns invitations for a trial that match a status. Can be called by a trial administrator only.
+GET >> /trials/<trialID>/participants >> Returns all the participants of a trial. Can be called by a trial administrator only.
+PUT >> /trials/<trialID>/invitations/<invitationID> >> Modifies an invitation status. Can be called by trial administrators and participants. Only administrators may revoke; only invitees may accept.
+POST >> /trials/sessions >> Adds a session to a trial.
+DELETE >> /trials/sessions/<sessionID> >> Deletes a session.
+GET >> /trials/sessions/<sessionID> >> Returns a trial session.
+PUT >> /trials/sessions/<sessionID> >> Updates an existing session.
+GET >> /trials/<trialID>/sessions/ongoing >> Returns ongoing sessions for the trial.
+GET >> /trials/<trialID>/sessions >> Returns all sessions for the trial.
+GET >> /trials/<trialID>/sessions/metadata/key/<key> >> Returns all values given to the metadata key.
+POST >> /trials/<trialID>/sessions/metadata >> Creates metadata for a trial session.
+GET >> /trials/<trialID>/sessions/metadata >> Returns all metadata for the trial session.
+PUT >> /trials/<trialID>/sessions/metadata/<metadataID> >> Updates a session's metadata.
+DELETE >> /trials/<trialID>/sessions/metadata/<metadataID> >> Removes a session's metadata.
+POST >> /trials/sessions/rules >> Adds session rules to the trial. Session rules define restrictions for metadata. They are different from the Rules created in My ARTIK Cloud for sending commands to devices.
+GET >> /trials/<trialID>/sessions/rules >> Returns session rules for the trial.
+GET >> /trials/<trialID>/sessions/rules/<ruleID>/sharing >> Exports the session rules as a simplified JSON object (that can be imported to another trial).
+POST >> /trials/<trialID>/sessions/rules/<ruleID>/sharing >> Replaces the session rules with the given imported rules JSON.
+GET >> /trials/sessions/rules/<ruleID> >> Returns session rules by ID.
+POST >> /trials/sessions/rules/metadata >> Adds metadata to rule.
+DELETE >> /trials/sessions/rules/metadata/<metadataID> >> Deletes the specified rule metadata.
+PUT >> /trials/sessions/rules/metadata/<metadataID> >> Updates the specified rule metadata.
+GET >> /trials/sessions/search >> Returns sessions according to the specified parameters.

@@ -1,0 +1,16 @@
+Ambrosus Gateway
+Caret
+Cisco Flare
+Cisco IPICS
+ClearBlade
+CubeSensors
+Droplit.io
+IBM Bluemix IoT
+Losant
+Microsoft Azure IoT Hub
+Google Nest
+Samsung ARTIK Cloud
+Sonos
+The Things Network
+thethings.iO
+Toon

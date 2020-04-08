@@ -1,0 +1,14 @@
+/token
+/accounts
+/accounts
+/accounts/accountAddress
+/accounts/accountAddress
+/assets
+/assets/assetId
+/assets
+/assets/assetId/events
+/events/eventId
+/events
+/bundle/bundleId
+/bundle/bundleId/info
+/nodeinfo

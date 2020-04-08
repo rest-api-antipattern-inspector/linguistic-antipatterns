@@ -1,0 +1,5 @@
+GET >> /policy >> The policy function executes a designated Cisco IPICS policy.
+POST >> /talkgroup/join >> The talkgroup/join function creates a SIP connection between the designated client and the designated resource (channel, radio, incident, or VTG).
+POST >> /talkgroup/leave >> The talkgroup/leave function terminates the SIP connection between the designated client and the designated resource (channel, radio, incident, or VTG).
+POST >> /uploaddata >> The uploaddata function uploads a resource (photograph, video, or journal) to the Cisco IPICS server and associates the resource with a designated incident. The resource can be uploaded as a URL or a file (for a photograph or video) or text (for a journal).
+GET >> /userdirectory >> The userdirectory function retrieves a list of all users who are associated with all radios that use a designated radio descriptor.

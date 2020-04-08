@@ -1,0 +1,31 @@
+***Antipattern***
+Count: 0
+
+***Pattern***
+Count: 26
+/v3/{agreementId}/production/electricity/flowsnull
+/v3/{agreementId}/production/electricity/datanull
+/v3/{agreementId}/production/electricity/graphnull
+/v3/{agreementId}/production/electricity/deliverynull
+/v3/agreementsnull
+/v3/{agreementId}/statusnull
+/v3/{agreementId}/consumption/gas/flowsnull
+/v3/{agreementId}/consumption/electricity/datanull
+/v3/{agreementId}/consumption/districtheat/datanull
+/v3/{agreementId}/consumption/electricity/flowsnull
+/v3/{agreementId}/consumption/gas/datanull
+/v3/{agreementId}/webhooks/{applicationId}null
+/v3/{agreementId}/webhooksnull
+/v3/{agreementId}/webhooksnull
+/v3/{agreementId}/thermostat/programsnull
+/v3/{agreementId}/thermostat/programsnull
+/v3/{agreementId}/thermostat/statesnull
+/v3/{agreementId}/thermostat/statesnull
+/v3/{agreementId}/thermostatnull
+/v3/{agreementId}/thermostatnull
+/v3/{agreementId}/devices/{deviceid}null
+/v3/{agreementId}/devices/{deviceid}null
+/v3/{agreementId}/devices/{deviceid}/datanull
+/v3/{agreementId}/devicesnull
+/v3/{agreementId}/devices/{deviceid}/flowsnull
+/v3/{agreementId}/devices/{deviceid}/flowsnull

@@ -1,0 +1,7 @@
+GET >> /api/v1.0/users/{phonenumber}/contacts >> Get the contacts list of a given phone number.
+POST >> /api/v1.0/users/{phonenumber}/mutualcontacts/ >> Lists the mutual contacts for all of the contacts of the phonenumbers given in the path
+POST >> /api/v1.0/users/{phonenumber}/mutualcontacts/{mutualcontact} >> Lists the mutual contacts of the phonenumbers given in the path
+PUT >> /api/v1.0/users/{phonenumber}/context >> Sets contextualized status message for the given number
+GET >> /api/v1.0/users/{phonenumber}/geoloc >> Get geolocation information for the given user
+GET >> /api/v1.0/users/{phonenumber}/status >> Get status information for the given user
+PUT >> /api/v1.0/users/{phonenumber}/status >> Sets status for the given number with an optional custom text or context text & app values

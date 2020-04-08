@@ -1,0 +1,84 @@
+POST >> /api/v/1/user/reg >> Register user
+POST >> /api/v/1/user/auth >> Authenticates a user into the system
+POST >> /api/v/1/user/anon >> Authenticates anonymous users into the system
+POST >> /api/v/1/user/checkauth >> Checks if user is authenticated
+POST >> /api/v/1/user/logout >> Logs out a user
+GET >> /api/v/1/user/info >> Returns information about a logged in user
+PUT >> /api/v/1/user/info >> Updates a logged in users information
+PUT >> /api/v/1/user/pass >> Changes a logged in users password
+GET >> /api/v/1/user >> Gets list of users
+PUT >> /api/v/2/devices/{systemKey}/{name} >> Update a device's state or custom attributes only
+POST >> /api/v/2/devices/{SystemKey}/auth >> Authenticates a device into the system
+GET >> /api/v/1/collection/{systemKey}/{collectionName} >> fetch collection
+PUT >> /api/v/1/collection/{systemKey}/{collectionName} >> Item update
+POST >> /api/v/1/collection/{systemKey}/{collectionName} >> Item create
+DELETE >> /api/v/1/collection/{systemKey}/{collectionName} >> Item delete
+GET >> /api/v/1/data/{collectionID} >> fetch collection
+PUT >> /api/v/1/data/{collectionID} >> Item update
+POST >> /api/v/1/data/{collectionID} >> Item create
+DELETE >> /api/v/1/data/{collectionID} >> Item delete
+GET >> /api/v/1/data/{collectionid}/columns >> get column key names
+POST >> /api/v/1/code/{systemKey}/{serviceName} >> Calls/executes ClearCode service
+GET >> /codeadmin/v/2/library/{systemKey} >> Gets the libraries for a system
+GET >> /codeadmin/v/2/library/{systemKey}/{name} >> Gets the libraries for a system
+PUT >> /codeadmin/v/2/library/{systemKey}/{name} >> Updates the libraries for a system
+POST >> /codeadmin/v/2/library/{systemKey}/{name} >> Creates libraries for a system
+DELETE >> /codeadmin/v/2/library/{systemKey}/{name} >> Deletes a librarie for a system
+GET >> /codeadmin/v/2/history/library/{systemKey}/{name} >> Gets all versions of a library for a system
+GET >> /codeadmin/v/2/history/library/{systemKey}/{name}/{version} >> Gets a specific version of a library for a system
+GET >> /codeadmin/failed >> Lists failed code service runs for all systems that a developer can access
+GET >> /codeadmin/failed/{systemKey} >> Lists failed code service runs for specified system
+POST >> /codeadmin/failed/{systemKey} >> Retry failed code services
+DELETE >> /codeadmin/failed/{systemKey} >> Delete failed code service run from list
+GET >> /api/v/1/message/{systemKey} >> Retrieve message history
+POST >> /api/v/1/message/{systemKey}/publish >> Publishes a message to a topic
+DELETE >> /api/v/1/message/{systemKey} >> Delete message history
+POST >> /admin/reg >> Registers a new developer account with the CB platform
+POST >> /admin/auth >> Authorizes a CB Developer account
+POST >> /admin/logout >> Logs a CB developer out of their session
+POST >> /admin/systemmanagement >> Creates a new system in a developers account
+GET >> /admin/systemmanagement >> Gets a systems info
+PUT >> /admin/systemmanagement >> Updates a systems info
+DELETE >> /admin/systemmanagement >> Deletes a system
+POST >> /admin/collectionmanagement >> Creates a new collection or connection in a system
+PUT >> /admin/collectionmanagement >> Updates an existing connection in a system
+PUT >> /admin/collectionmanagement >> Creates a column within an existing collection
+PUT >> /admin/collectionmanagement >> Deletes a column within an existing collection
+DELETE >> /admin/collectionmanagement >> Deletes an existing collection in a system
+GET >> /admin/allcollections >> Returns all the collections for a system
+GET >> /admin/allsystems >> Returns all the systems for a developer account
+PUT >> /admin/regensystemsecret >> Generates new keys for an existing system
+GET >> /admin/userinfo >> Returns info on the developer
+PUT >> /admin/user/{systemKey} >> Changes roles of a particular user
+PUT >> /admin/putpass >> Changes a developers password
+POST >> /admin/forgotpass >> Sends an email to the developer
+GET >> /admin/triggers/definitions >> Gets trigger definitions
+GET >> /admin/triggers/handlers/{systemKey} >> Gets the trigger handlers
+GET >> /admin/triggers/handlers/{systemKey}/{name} >> Gets the trigger handlers
+PUT >> /admin/triggers/handlers/{systemKey}/{name} >> Updates the trigger handlers
+POST >> /admin/triggers/handlers/{systemKey}/{name} >> Creates trigger
+DELETE >> /admin/triggers/handlers/{systemKey}/{name} >> Deletes the trigger handlers
+GET >> /admin/triggers/timers/{systemKey} >> Gets the timer handlers
+GET >> /admin/triggers/timers/{systemKey}/{name} >> Gets the timer handlers
+PUT >> /admin/triggers/timers/{systemKey}/{name} >> Updates the timer handlers
+POST >> /admin/triggers/timers/{systemKey}/{name} >> Creates new timer handlers
+DELETE >> /admin/triggers/timers/{systemKey}/{name} >> Deletes the trigger handlers
+GET >> /admin/platform/developers >> This endpoint returns all developers in the platform
+GET >> /admin/platform/developer >> This endpoint returns developer info
+POST >> /admin/platform/developer >> This endpoint is used to disable a developer
+GET >> /admin/platform/{systemKey} >> This endpoint will be used by the billing system to know the status of a system as it relates to limits
+GET >> /admin/devices/{systemKey} >> Gets info for all devices for system
+GET >> /admin/devices/{systemKey}/{name} >> Gets info for a system device
+PUT >> /admin/devices/{systemKey}/{name} >> Update a device's information
+POST >> /admin/devices/{systemKey}/{name} >> Create a new system device
+DELETE >> /admin/devices/{systemKey}/{name} >> Deletes a system device
+GET >> /admin/edges/{systemKey} >> Gets all the edges for a system
+GET >> /admin/edges/{systemKey}/{edgeName} >> Get info for one edge
+PUT >> /admin/edges/{systemKey}/{edgeName} >> Update info for one edge
+POST >> /admin/edges/{systemKey}/{edgeName} >> Create an edge
+DELETE >> /admin/edges/{systemKey}/{edgeName} >> Delete an edge
+GET >> /api/v/2/analytics/count >> Gets number of developers, systems, services, collections, users, roles
+GET >> /api/v/2/analytics/storage >> Gets current storage usage
+GET >> /api/v/2/analytics/eventtotals >> Gets the totals for specific criteria counted over time
+GET >> /api/v/2/analytics/eventlist >> Gets events related to an element
+GET >> /api/v/2/analytics/userevents >> Gets events related to a user

@@ -1,0 +1,5 @@
+orgs ->organizations
+org ->organization
+auth ->authentication
+mqtt ->Message Queuing Telemetry Transport
+api -> application programming interface

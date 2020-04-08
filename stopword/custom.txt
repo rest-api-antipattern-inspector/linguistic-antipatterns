@@ -1,0 +1,8 @@
+www
+com
+true
+false
+oauth
+parameters
+link
+https

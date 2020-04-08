@@ -1,0 +1,31 @@
+***Antipattern***
+Count: 4
+/v3/{agreementId}/consumption/districtheat/data
+/v3/{agreementId}/webhooks/{applicationId}
+/v3/{agreementId}/webhooks
+/v3/{agreementId}/webhooks
+
+***Pattern***
+Count: 22
+/v3/{agreementId}/production/electricity/flows
+/v3/{agreementId}/production/electricity/data
+/v3/{agreementId}/production/electricity/graph
+/v3/{agreementId}/production/electricity/delivery
+/v3/agreements
+/v3/{agreementId}/status
+/v3/{agreementId}/consumption/gas/flows
+/v3/{agreementId}/consumption/electricity/data
+/v3/{agreementId}/consumption/electricity/flows
+/v3/{agreementId}/consumption/gas/data
+/v3/{agreementId}/thermostat/programs
+/v3/{agreementId}/thermostat/programs
+/v3/{agreementId}/thermostat/states
+/v3/{agreementId}/thermostat/states
+/v3/{agreementId}/thermostat
+/v3/{agreementId}/thermostat
+/v3/{agreementId}/devices/{deviceid}
+/v3/{agreementId}/devices/{deviceid}
+/v3/{agreementId}/devices/{deviceid}/data
+/v3/{agreementId}/devices
+/v3/{agreementId}/devices/{deviceid}/flows
+/v3/{agreementId}/devices/{deviceid}/flows

@@ -1,0 +1,14 @@
+POST >> /token >> Create token
+POST >> /accounts >> Add account. Warning Request sender needs to have register accounts permission
+GET >> /accounts >> Find accounts. Warning Request sender needs to have manage accounts permissionFinds accounts satisfying provided criteria.
+GET >> /accounts/accountAddress >> Get account. Warning Request sender needs to have manage accounts permission
+PUT >> /accounts/accountAddress >> Modify account. Warning Request sender needs to have manage_accounts permission. It is not possible to modify protected accounts and accounts belonging to different organizations.
+POST >> /assets >> Create an asset. Places (after intensive validations) the provided asset object into the system. Warning Request sender needs to have create asset permission
+GET >> /assets/assetId >> Fetch an asset by Id. Fetches asset with provided assetId in the system.
+GET >> /assets >> Find assets. Finds assets satisfying provided criteria.
+POST >> /assets/assetId/events >> Create an event. Places (after intensive validations) the provided event object into the system.Warning Message sender needs to have create event permission
+GET >> /events/eventId >> Fetch event. Fetches an event by identifier
+GET >> /events >> Find events. Finds event satisfying provided criteria.
+GET >> /bundle/bundleId >> Fetch bundle. Fetches a bundle by identifier
+GET >> /bundle/bundleId/info >> Fetch bundle metadata. Fetches a bundle metadata by identifier
+GET >> /nodeinfo >> Get node info

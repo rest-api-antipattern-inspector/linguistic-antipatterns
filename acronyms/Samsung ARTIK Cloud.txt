@@ -1,0 +1,2 @@
+mgmt ->management
+JSON ->JavaScript Object Notation

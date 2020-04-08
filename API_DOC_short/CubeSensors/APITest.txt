@@ -1,0 +1,4 @@
+/v1/devices/
+/v1/devices/[device id]
+/v1/devices/[device id]/current
+/v1/devices/[device id]/span

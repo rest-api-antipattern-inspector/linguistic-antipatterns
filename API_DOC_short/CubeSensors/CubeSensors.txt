@@ -1,0 +1,4 @@
+GET >>  /v1/devices/ >>  List devices to see which devices the user gave you access to. The response will include a device id, a name and a device type (only supported value cube).
+GET >>  /v1/devices/[device id] >>  Fetch device info for a specific device.
+GET >>  /v1/devices/[device id]/current >>  Get current measurements from a device. It will return the last measurements received by our server that is no more than 15 minutes old. The measurements are all processed to human values, but the fields might change in the future.
+GET >>  /v1/devices/[device id]/span >>  Get measurements for a device during a defined span, ordered so that the last measurement is the first in results. The measurements are all processed to human values, but the fields might change in the future. The span datetimes need to be specified with seconds and either without timezone information or with a UTC timezone (Z or +00:00).

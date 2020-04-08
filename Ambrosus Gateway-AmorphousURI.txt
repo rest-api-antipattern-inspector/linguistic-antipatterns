@@ -1,0 +1,19 @@
+***Antipattern***
+Count: 0
+
+***Pattern***
+Count: 14
+/tokennull
+/accountsnull
+/accountsnull
+/accounts/accountAddressnull
+/accounts/accountAddressnull
+/assetsnull
+/assets/assetIdnull
+/assetsnull
+/assets/assetId/eventsnull
+/events/eventIdnull
+/eventsnull
+/bundle/bundleIdnull
+/bundle/bundleId/infonull
+/nodeinfonull

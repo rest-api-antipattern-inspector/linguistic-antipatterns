@@ -1,0 +1,3 @@
+hdmi ->high definition multimedia interface
+cec ->consumer electronics control
+app ->application

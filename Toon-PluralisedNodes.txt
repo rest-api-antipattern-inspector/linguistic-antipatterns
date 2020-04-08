@@ -1,0 +1,12 @@
+***Antipattern***
+Count: 1
+POST  /v3/{agreementId}/webhooks [Singular last node with POST method.] 
+
+***Pattern***
+Count: 6
+DELETE  /v3/{agreementId}/webhooks/{applicationId} [Pluralized last node with PUT|DELETE method.] 
+PUT  /v3/{agreementId}/thermostat/programs [Pluralized last node with PUT|DELETE method.] 
+PUT  /v3/{agreementId}/thermostat/states [Pluralized last node with PUT|DELETE method.] 
+PUT  /v3/{agreementId}/thermostat [Pluralized last node with PUT|DELETE method.] 
+PUT  /v3/{agreementId}/devices/{deviceid} [Pluralized last node with PUT|DELETE method.] 
+PUT  /v3/{agreementId}/devices/{deviceid}/flows [Pluralized last node with PUT|DELETE method.] 

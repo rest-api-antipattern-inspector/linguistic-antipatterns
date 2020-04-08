@@ -1,0 +1,4 @@
+app ->application
+api ->application programming interface
+json ->java script object notation
+id ->identification

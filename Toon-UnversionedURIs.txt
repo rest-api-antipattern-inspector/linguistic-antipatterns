@@ -1,0 +1,31 @@
+***Antipattern***
+Count: 0
+
+***Pattern***
+Count: 26
+/v3/{agreementId}/production/electricity/flows [Version found.] 
+/v3/{agreementId}/production/electricity/data [Version found.] 
+/v3/{agreementId}/production/electricity/graph [Version found.] 
+/v3/{agreementId}/production/electricity/delivery [Version found.] 
+/v3/agreements [Version found.] 
+/v3/{agreementId}/status [Version found.] 
+/v3/{agreementId}/consumption/gas/flows [Version found.] 
+/v3/{agreementId}/consumption/electricity/data [Version found.] 
+/v3/{agreementId}/consumption/districtheat/data [Version found.] 
+/v3/{agreementId}/consumption/electricity/flows [Version found.] 
+/v3/{agreementId}/consumption/gas/data [Version found.] 
+/v3/{agreementId}/webhooks/{applicationId} [Version found.] 
+/v3/{agreementId}/webhooks [Version found.] 
+/v3/{agreementId}/webhooks [Version found.] 
+/v3/{agreementId}/thermostat/programs [Version found.] 
+/v3/{agreementId}/thermostat/programs [Version found.] 
+/v3/{agreementId}/thermostat/states [Version found.] 
+/v3/{agreementId}/thermostat/states [Version found.] 
+/v3/{agreementId}/thermostat [Version found.] 
+/v3/{agreementId}/thermostat [Version found.] 
+/v3/{agreementId}/devices/{deviceid} [Version found.] 
+/v3/{agreementId}/devices/{deviceid} [Version found.] 
+/v3/{agreementId}/devices/{deviceid}/data [Version found.] 
+/v3/{agreementId}/devices [Version found.] 
+/v3/{agreementId}/devices/{deviceid}/flows [Version found.] 
+/v3/{agreementId}/devices/{deviceid}/flows [Version found.] 

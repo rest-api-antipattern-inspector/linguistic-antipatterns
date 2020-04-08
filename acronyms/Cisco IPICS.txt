@@ -1,0 +1,3 @@
+IPICS ->Internet Protocol Interoperability and Collaboration System
+SIP ->Session Initiation Protocol
+VTG ->Video Test Generator

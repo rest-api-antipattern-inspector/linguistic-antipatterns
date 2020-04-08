@@ -1,0 +1,5 @@
+/policy
+/talkgroup/join
+/talkgroup/leave
+/uploaddata
+/userdirectory

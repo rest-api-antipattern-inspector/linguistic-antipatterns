@@ -1,0 +1,6 @@
+"Topic 0","provide","find","identifierget","permissionget","bundle","intensive","create","node","message","system","asset","protect","satisfy","permissionfind","register"
+"Topic 1","info","bundle","event","belong","manage","request","create","node","message","system","asset","protect","satisfy","permissionfind","register"
+"Topic 2","fetch","satisfy","event","validation","organization","manage","create","node","message","system","asset","protect","satisfy","permissionfind","register"
+"Topic 3","account","sender","warning","bundleid","bundle","assetid","fetch","accountaddress","criterion","tokenpost","token","post","satisfy","permissionfind","register"
+"Topic 4","asset","event","request","criterion","create","post","nodeinfo","system","validation","permissionput","manage","add","satisfy","permissionfind","register"
+"Topic 5","metadatum","object","places","asset","modify","warning","eventid","event","assetid","system","permission","accountaddress","satisfy","permissionfind","register"
