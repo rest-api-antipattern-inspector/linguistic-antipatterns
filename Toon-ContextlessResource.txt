@@ -1,12 +1,11 @@
 ***Antipattern***
-Count: 4
-/v3/{agreementId}/consumption/districtheat/data
+Count: 3
 /v3/{agreementId}/webhooks/{applicationId}
 /v3/{agreementId}/webhooks
 /v3/{agreementId}/webhooks
 
 ***Pattern***
-Count: 22
+Count: 23
 /v3/{agreementId}/production/electricity/flows
 /v3/{agreementId}/production/electricity/data
 /v3/{agreementId}/production/electricity/graph
@@ -15,6 +14,7 @@ Count: 22
 /v3/{agreementId}/status
 /v3/{agreementId}/consumption/gas/flows
 /v3/{agreementId}/consumption/electricity/data
+/v3/{agreementId}/consumption/districtheat/data
 /v3/{agreementId}/consumption/electricity/flows
 /v3/{agreementId}/consumption/gas/data
 /v3/{agreementId}/thermostat/programs

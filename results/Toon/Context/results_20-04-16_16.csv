@@ -1,0 +1,2 @@
+"Uri","Contextual?","Topic Number","Similarity","Topic wordset","Detection Time (ms)","Detection Time"
+"/v3/{agreementId}/consumption/districtheat/data","Yes","1","1.4504772","[agreementid, device, datum, time, give, period, electricity, thermostat, consumption, production, state, temperature, program, flow, deviceid]","127","0.0127"
