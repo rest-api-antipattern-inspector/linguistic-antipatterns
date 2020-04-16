@@ -318,17 +318,44 @@ public class RestAnalyser {
         	List<String> temp = Arrays.asList(tmp1);
         	splitURI.addAll(temp);
         }
-        
-        // TODO splitta dubbelord
-        
+
         for (String Node : splitURI) {
             if (acronyms.containsKey(Node.trim())) {
                 uriNodes.addAll(acronyms.get(Node.trim()));
-            } else {
+            } else {           	
                 if ((disco.frequency(Node.trim()) == 0)) {
                     ArrayList<String> splitNodes = textTool.camelCaseSplit(Node.trim());
+                    if(splitNodes.size() > 1) {
                     for (String splitNode : splitNodes)
                         uriNodes.add(splitNode.toLowerCase().trim());
+                    } else {
+                    	String word = Node.trim();
+                    	String wordSingular = "";
+                    	if (word.charAt(word.length() - 1) == 's') {
+                    		wordSingular = word.substring(0, word.length() - 1);
+                    	};
+                    	if(disco.frequency(word) > 0 || disco.frequency(wordSingular) > 0) {
+                    		uriNodes.add(word);
+                    	} else {
+                    		for(int i = 0; i < word.length(); i++) {
+                    			if (i == word.length() - 1) {
+                    				uriNodes.add(word);
+                    			}
+                    			String subWord1 = word.substring(0, i + 1);
+                    			String subWord2 = word.substring((i + 1), word.length());
+
+                    			if (disco.frequency(subWord1.trim()) == 0) {
+                    				continue;
+                    			}
+                    		
+                    			if(disco.frequency(subWord2.trim()) > 0) {
+                    				uriNodes.add(subWord1);
+                    				uriNodes.add(subWord2);
+                    				break;
+                    			}
+                    		}
+                    	}
+                    }
                 } else {
                     uriNodes.add(Node.toLowerCase().trim());
                 }
