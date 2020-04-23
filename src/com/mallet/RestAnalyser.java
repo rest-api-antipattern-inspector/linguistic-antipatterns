@@ -331,23 +331,34 @@ public class RestAnalyser {
                     } else {
                     	String word = Node.trim();
                     	String wordSingular = "";
+                    	// Check if word might be plural
                     	if (word.charAt(word.length() - 1) == 's') {
                     		wordSingular = word.substring(0, word.length() - 1);
                     	};
+                    	// If word not exist see if singular word exist
                     	if(disco.frequency(word) > 0 || disco.frequency(wordSingular) > 0) {
                     		uriNodes.add(word);
                     	} else {
+                    		// For each character in the word
                     		for(int i = 0; i < word.length(); i++) {
+                    			// If word is not found after checking all
+                    			// characters, add word to node list
                     			if (i == word.length() - 1) {
                     				uriNodes.add(word);
+                    				break;
                     			}
+                    			// Break the word in two, 
                     			String subWord1 = word.substring(0, i + 1);
                     			String subWord2 = word.substring((i + 1), word.length());
 
+                    			// If the first word is not found in the dictionary 
+                    			// continue loop.
                     			if (disco.frequency(subWord1.trim()) == 0) {
                     				continue;
                     			}
-                    		
+                    			
+                    			// If first and second words are found, add both 
+                    			// to nod list and end the loop
                     			if(disco.frequency(subWord2.trim()) > 0) {
                     				uriNodes.add(subWord1);
                     				uriNodes.add(subWord2);
