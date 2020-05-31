@@ -1,0 +1,10 @@
+***Antipattern***
+Count: 4
+POST  /account/{username}/verifyemail [Singular last node with POST method.] 
+POST  /account/me/follow/tag/{tagName} [Singular last node with POST method.] 
+POST  /image/{imageHash} [Singular last node with POST method.] 
+POST  /image/{imageHash}/favorite [Singular last node with POST method.] 
+
+***Pattern***
+Count: 1
+PUT  /account/{username}/settings [Pluralized last node with PUT|DELETE method.] 

@@ -1,0 +1,35 @@
+***Antipattern***
+Count: 10
+/repos/{owner}/{repo}/contributors
+/repos/{owner}/{repo}/languages
+/repos/{owner}/{repo}/tags
+/repos/{owner}/{repo}/issues/{issue_number}
+/repos/{owner}/{repo}/issues/{issue_number}
+/repos/{owner}/{repo}/pulls
+/repos/{owner}/{repo}/pulls/{pull_number}
+/repos/{owner}/{repo}/pulls/{pull_number}
+/repos/{owner}/{repo}/pulls/{pull_number}/commits
+/repos/{owner}/{repo}/pulls/{pull_number}/files
+
+***Pattern***
+Count: 20
+/user/repos
+/users/{username}/repos
+/orgs/{org}/repos
+/repositories
+/repos/{owner}/{repo}
+/repos/{owner}/{repo}/topics
+/repos/{owner}/{repo}/topics
+/repos/{owner}/{repo}/vulnerability-alerts
+/issues
+/orgs/{org}/issues
+/repos/{owner}/{repo}/issues
+/repos/{owner}/{repo}/issues
+/organizations
+/users/{username}/orgs
+/orgs/{org}
+/repos/{owner}/{repo}/projects
+/orgs/{org}/projects
+/users/{username}/projects
+/repos/{owner}/{repo}/projects
+/orgs/{org}/projects

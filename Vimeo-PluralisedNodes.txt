@@ -1,0 +1,21 @@
+***Antipattern***
+Count: 0
+
+***Pattern***
+Count: 16
+PUT  /users/{user_id}/following/{follow_user_id} [Pluralized last node with PUT|DELETE method.] 
+PUT  /me/following/{follow_user_id} [Pluralized last node with PUT|DELETE method.] 
+DELETE  /users/{user_id}/following/{follow_user_id} [Pluralized last node with PUT|DELETE method.] 
+DELETE  /me/following/{follow_user_id} [Pluralized last node with PUT|DELETE method.] 
+PUT  /users/{user_id}/categories/{category} [Pluralized last node with PUT|DELETE method.] 
+PUT  /me/categories/{category} [Pluralized last node with PUT|DELETE method.] 
+DELETE  /users/{user_id}/categories/{category} [Pluralized last node with PUT|DELETE method.] 
+DELETE  //me/categories/{category} [Pluralized last node with PUT|DELETE method.] 
+PUT  /channels/{channel_id}/categories/{category} [Pluralized last node with PUT|DELETE method.] 
+PUT  /users/{user_id}/channels/{channel_id} [Pluralized last node with PUT|DELETE method.] 
+PUT  /me/channels/{channel_id} [Pluralized last node with PUT|DELETE method.] 
+PUT  /channels/{channel_id}/tags/{word} [Pluralized last node with PUT|DELETE method.] 
+DELETE  /channels/{channel_id}/tags/{word} [Pluralized last node with PUT|DELETE method.] 
+PUT  /groups/{group_id}/videos/{video_id} [Pluralized last node with PUT|DELETE method.] 
+DELETE  /users/{user_id}/likes/{video_id} [Pluralized last node with PUT|DELETE method.] 
+DELETE  /me/likes/{video_id} [Pluralized last node with PUT|DELETE method.] 

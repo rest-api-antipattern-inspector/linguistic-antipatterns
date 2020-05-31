@@ -1,0 +1,26 @@
+***Antipattern***
+Count: 12
+/fireball.api
+/mdesign.api
+/nhats.api
+/planetary/apod
+/neo/rest/v1/feed
+/DONKI/CME
+/cgi-bin/nstedAPI/nph-nstedAPI
+/genelab/data/glds/files/{GLDS_STUDY_ID}
+/genelab/data/search
+/mars-photos/api/v1/rovers/curiosity/photos
+/metadata/{nasa_id}
+/techport/api/projects/17792
+
+***Pattern***
+Count: 9
+/cad.api
+/sentry.api
+/natural
+/natural/all
+/EPIC/api/natural/images
+/search
+/asset/{nasa_id}
+/captions/{nasa_id}
+/tle

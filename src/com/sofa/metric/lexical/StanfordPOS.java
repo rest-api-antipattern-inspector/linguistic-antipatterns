@@ -2,6 +2,8 @@ package com.sofa.metric.lexical;
 
 import java.util.ArrayList;
 
+import net.didion.jwnl.JWNLException;
+
 public class StanfordPOS {
 
 	private static ArrayList<String> discriminantPOS = null;
@@ -35,8 +37,9 @@ public class StanfordPOS {
 	 * Each word will be in lower case
 	 * @param node
 	 * @return
+	 * @throws JWNLException 
 	 */
-	public static ArrayList<String> getNodeDiscriminants(ArrayList<String> node) {
+	public static ArrayList<String> getNodeDiscriminants(ArrayList<String> node) throws JWNLException {
 		ArrayList<String> result = new ArrayList<String>();
 		int index = 0;
 		for (String pos : Dictionaries.getInstance().getSFPartOfSpeechsForNode(node)) {

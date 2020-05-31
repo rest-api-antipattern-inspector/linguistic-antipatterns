@@ -1,0 +1,21 @@
+***Antipattern***
+Count: 0
+
+***Pattern***
+Count: 16
+/usernull
+/usernull
+/organizationsnull
+/organizations/{ORG_ID}/shorten_countsnull
+/organizations/{ORG_ID}null
+/shortennull
+/bitlinks/{BITLINK}/countriesnull
+/bitlinks/{BITLINK}/clicksnull
+/bitlinks/{BITLINK}/referrers_by_domainsnull
+/expandnull
+/bitlinksnull
+/bitlinks/{BITLINK}/referrersnull
+/bitlinks/{BITLINK}/clicks/summarynull
+/bitlinks/{BITLINK}null
+/bitlinks/{BITLINK}null
+/bitlinks/{BITLINK}/referring_domainsnull

@@ -22,8 +22,9 @@ public class HierarchicalMetrics {
 	 * @param nodeB
 	 * @param reliability
 	 * @return
+	 * @throws JWNLException 
 	 */
-	public static boolean specializationHierachy(ArrayList<String> nodeA, ArrayList<String> nodeB) {
+	public static boolean specializationHierachy(ArrayList<String> nodeA, ArrayList<String> nodeB) throws JWNLException {
 		
 		// retrieves discriminant words
 		ArrayList<String> discriminantsA = StanfordPOS.getNodeDiscriminants(nodeA);

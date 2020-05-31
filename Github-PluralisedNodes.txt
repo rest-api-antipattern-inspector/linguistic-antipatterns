@@ -1,0 +1,10 @@
+***Antipattern***
+Count: 3
+POST  /repos/{owner}/{repo}/issues [Singular last node with POST method.] 
+POST  /repos/{owner}/{repo}/projects [Singular last node with POST method.] 
+POST  /orgs/{org}/projects [Singular last node with POST method.] 
+
+***Pattern***
+Count: 2
+PUT  /repos/{owner}/{repo}/topics [Pluralized last node with PUT|DELETE method.] 
+PUT  /repos/{owner}/{repo}/vulnerability-alerts [Pluralized last node with PUT|DELETE method.] 

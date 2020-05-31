@@ -79,7 +79,7 @@ public class RestAnalyser {
         apiDescription = new ArrayList<String>();
         System.err.println("Creating DISCO Distributional Similarity Calculator");
         try {
-            disco = new DISCO("/Users/jeshag/eclipse-workspace/enwiki-20130403-sim-lemma-mwl-lc", false);
+            disco = new DISCO("C:\\Users\\jeppa\\eclipse-workspace\\enwiki-20130403-sim-lemma-mwl-lc", false);
         } catch (IOException e) {
             e.printStackTrace();
         } catch (CorruptConfigFileException e) {
@@ -322,8 +322,8 @@ public class RestAnalyser {
         for (String Node : splitURI) {
             if (acronyms.containsKey(Node.trim())) {
                 uriNodes.addAll(acronyms.get(Node.trim()));
-            } else {           	
-                if ((disco.frequency(Node.trim()) == 0)) {
+            } else {
+                if (disco.frequency(Node.trim()) == 0) {
                     ArrayList<String> splitNodes = textTool.camelCaseSplit(Node.trim());
                     if(splitNodes.size() > 1) {
                     for (String splitNode : splitNodes)
@@ -332,7 +332,8 @@ public class RestAnalyser {
                     	String word = Node.trim();
                     	String wordSingular = "";
                     	// Check if word might be plural
-                    	if (word.charAt(word.length() - 1) == 's') {
+                    	System.out.println(word);
+                    	if (word.length() > 0 && word.charAt(word.length() - 1) == 's') {
                     		wordSingular = word.substring(0, word.length() - 1);
                     	};
                     	// If word not exist see if singular word exist

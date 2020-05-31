@@ -1,0 +1,23 @@
+***Antipattern***
+Count: 18
+POST  /statuses/update [Singular last node with POST method.] 
+POST  /statuses/retweet [Singular last node with POST method.] 
+POST  /favorites/create [Singular last node with POST method.] 
+POST  /favorites/destroy [Singular last node with POST method.] 
+POST  /statuses/unretweet [Singular last node with POST method.] 
+POST  /statuses/destroy [Singular last node with POST method.] 
+POST  /lists/create [Singular last node with POST method.] 
+POST  /friendships/create [Singular last node with POST method.] 
+POST  /friendships/update [Singular last node with POST method.] 
+POST  /blocks/create [Singular last node with POST method.] 
+POST  /mutes/users/create [Singular last node with POST method.] 
+POST  /lists/members/create [Singular last node with POST method.] 
+POST  /lists/subscribers/create [Singular last node with POST method.] 
+POST  /lists/members/destroy [Singular last node with POST method.] 
+POST  /lists/subscribers/destroy [Singular last node with POST method.] 
+POST  /lists/destroy [Singular last node with POST method.] 
+POST  /friendships/destroy [Singular last node with POST method.] 
+POST  /blocks/destroy [Singular last node with POST method.] 
+
+***Pattern***
+Count: 0

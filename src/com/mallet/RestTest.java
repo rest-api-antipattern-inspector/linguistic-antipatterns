@@ -17,6 +17,7 @@ import com.sofa.metric.lexical.LexicalMetrics;
 import com.sofa.metric.lexical.parser.URIParser;
 import com.sofa.util.OutputFormatter;
 
+import net.didion.jwnl.JWNLException;
 import net.didion.jwnl.data.POS;
 
 import org.apache.commons.lang3.StringUtils;
@@ -106,7 +107,7 @@ public class RestTest {
         return APIs;
     }
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, JWNLException {
         long detectionTime = 0;
         CSVWriter summaryCsv = null;
         CSVWriter summaryCoCsv = null;
@@ -216,10 +217,10 @@ public class RestTest {
         	detectCRUDyURI(); writeOutput(selectedAPI+"-"+"CRUDyURI.txt", crudyURIResultAP, crudyURIResultP);
         	detectNonHierarchicalNodes(); writeOutput(selectedAPI+"-"+"NonHierarchicalNodes.txt", nonHierarchyResultAP, nonHierarchyResultP);
         	detectPluralisedNodes(); writeOutput(selectedAPI+"-"+"PluralisedNodes.txt", pluralisedResultAP, pluralisedResultP);
-        	detectUnversionedURIs(restAnalyser, execTime, summaryCsv, detectionTime); writeOutput(selectedAPI+"-"+"UnversionedURIs.txt", unversionedResultAP, versionedResultP);
-        	detectLessCohesiveDocumentation(stopword, stopwordRemove, acronyms, restAnalyser, detectionTime, summaryCoCsv); writeOutput(selectedAPI+"-"+"LessCohesiveDoc.txt", lessCohesiveDocResultAP, lessCohesiveDocResultP);
+        	//detectUnversionedURIs(restAnalyser, execTime, summaryCsv, detectionTime); writeOutput(selectedAPI+"-"+"UnversionedURIs.txt", unversionedResultAP, versionedResultP);
+        	//detectLessCohesiveDocumentation(stopword, stopwordRemove, acronyms, restAnalyser, detectionTime, summaryCoCsv); writeOutput(selectedAPI+"-"+"LessCohesiveDoc.txt", lessCohesiveDocResultAP, lessCohesiveDocResultP);
         	detectContextlessResource(restAnalyser, execTime, summaryCsv, detectionTime); writeOutput(selectedAPI+"-"+"ContextlessResource.txt", contextlessResultAP, contextlessResultP);
-        	detectInconsistentDocumentation(stopword, stopwordRemove, acronyms, restAnalyser, detectionTime, summaryCoCsv); writeOutput(selectedAPI+"-"+"InconsistentDoc.txt", inconsistentdocumentationAP, inconsistentdocumentationP);
+        	//detectInconsistentDocumentation(stopword, stopwordRemove, acronyms, restAnalyser, detectionTime, summaryCoCsv); writeOutput(selectedAPI+"-"+"InconsistentDoc.txt", inconsistentdocumentationAP, inconsistentdocumentationP);
         	
         }
         else{
@@ -484,7 +485,7 @@ public class RestTest {
       	
 	}
 
-	private static void detectPluralisedNodes() throws IOException {
+	private static void detectPluralisedNodes() throws IOException, JWNLException {
 
 System.err.println("Detection of PluralisedNodes Antipattern for " + selectedAPI);
         
@@ -598,7 +599,7 @@ System.err.println("Detection of PluralisedNodes Antipattern for " + selectedAPI
 		
 	}
 
-	private static void detectNonHierarchicalNodes() throws IOException {
+	private static void detectNonHierarchicalNodes() throws IOException, JWNLException {
 		BufferedReader reader2 = new BufferedReader(new FileReader(docPath + selectedAPI + "/APITest.txt"));
         String URI2;
         try {

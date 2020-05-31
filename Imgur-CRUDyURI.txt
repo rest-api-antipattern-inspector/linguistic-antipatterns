@@ -1,0 +1,30 @@
+***Antipattern***
+Count: 0
+
+***Pattern***
+Count: 25
+/account/me/imagesnull
+/account/{username}null
+/account/me/blocknull
+/account/me/imagesnull
+/account/{username}/submissions/{page}null
+/account/{username}/available_avatarsnull
+/account/{username}/avatarnull
+/account/me/settingsnull
+/account/{username}/settingsnull
+/account/{username}/settingsnull
+/account/{username}/verifyemailnull
+/account/{username}/verifyemailnull
+/account/{username}/albums/{page}null
+/account/{username}/albums/ids/{page}null
+/account/{username}/albums/countnull
+/account/{username}/comments/{commentSort}/{page}null
+/account/{username}/comments/ids/{sort}/{page}null
+/account/{username}/comments/countnull
+/account/{username}/images/{page}null
+/account/{username}/images/ids/{page}null
+/account/{username}/images/countnull
+/account/{username}/notifications/repliesnull
+/account/me/follow/tag/{tagName}null
+/image/{imageHash}null
+/image/{imageHash}/favoritenull

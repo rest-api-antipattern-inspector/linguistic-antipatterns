@@ -1,0 +1,24 @@
+***Antipattern***
+Count: 0
+
+***Pattern***
+Count: 19
+/{person-id}null
+/{user-id}/accountsnull
+/{user-id}/albumsnull
+/{user-id}/apprequestformerrecipientsnull
+/{user-id}/apprequestsnull
+/{user-id}/assigned_business_asset_groupsnull
+/{user-id}/business_usersnull
+/{user-id}/custom_labelsnull
+/{user-id}/friendsnull
+/{user-id}/groupsnull
+/likesnull
+/{user-id}/live_encodersnull
+/{user-id}/live_videosnull
+/{user-id}/musicnull
+/{user-id}/permissionsnull
+/{user-id}/photosnull
+/{user-id}/request_historynull
+/{user-id}/taggable_friendsnull
+/{user-id}/videosnull

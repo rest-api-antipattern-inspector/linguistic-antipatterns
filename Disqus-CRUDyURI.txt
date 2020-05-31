@@ -1,0 +1,41 @@
+***Antipattern***
+Count: 1
+/users/updateProfile.jsonnull [update foud] 
+
+***Pattern***
+Count: 35
+/threads/create.jsonnull
+/posts/create.jsonnull
+/forums/details.jsonnull
+/forums/addModerator.jsonnull
+/forums/interestingForums.jsonnull
+/forums/listCategories.jsonnull
+/forums/listFollowers.jsonnull
+/forums/listModerators.jsonnull
+/forums/listMostActiveUsers.jsonnull
+/forums/listMostLikedUsers.jsonnull
+/forums/listPosts.jsonnull
+/forums/listUserModerationHistory.jsonnull
+/categories/details.jsonnull
+/categories/list.jsonnull
+/categories/listPosts.jsonnull
+/categories/listThreads.jsonnull
+/posts/approve.jsonnull
+/posts/details.jsonnull
+/posts/getContext.jsonnull
+/posts/list.jsonnull
+/posts/listModerationHistory.jsonnull
+/posts/listPopular.jsonnull
+/posts/listReporters.jsonnull
+/posts/vote.jsonnull
+/threads/details.jsonnull
+/threads/list.jsonnull
+/threads/listPosts.jsonnull
+/threads/update.jsonnull
+/users/details.jsonnull
+/users/interestingUsers.jsonnull
+/users/listActiveForums.jsonnull
+/users/listForums.jsonnull
+/users/listMostActiveForums.jsonnull
+/users/listOwnedChannels.jsonnull
+/users/listPosts.jsonnull

@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 import java.util.Map;
 
+import net.didion.jwnl.JWNLException;
 import net.didion.jwnl.data.POS;
 import net.didion.jwnl.data.Synset;
 
@@ -58,8 +59,9 @@ public class LexicalMetrics {
 	 * @param node
 	 * @param reliability
 	 * @return
+	 * @throws JWNLException 
 	 */
-	public static boolean nodeIsPlural(ArrayList<String> node, LexicalResult.Reliability reliability) {
+	public static boolean nodeIsPlural(ArrayList<String> node, LexicalResult.Reliability reliability) throws JWNLException {
 		
 				
 		int delta=1;
@@ -87,8 +89,9 @@ public class LexicalMetrics {
 	 * @param node
 	 * @param reliability
 	 * @return
+	 * @throws JWNLException 
 	 */
-	public static boolean nodeIsSingular(ArrayList<String> node, LexicalResult.Reliability reliability) {
+	public static boolean nodeIsSingular(ArrayList<String> node, LexicalResult.Reliability reliability) throws JWNLException {
 		ArrayList<String> sfposs = Dictionaries.getInstance().getSFPartOfSpeechsForNode(node);
 		if (sfposs.size() > 0) {
 			// retrieves the last word

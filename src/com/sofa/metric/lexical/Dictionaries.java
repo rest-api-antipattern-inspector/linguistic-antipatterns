@@ -112,12 +112,14 @@ public class Dictionaries {
 		return new ArrayList<String>();
 	}
 	// Stanford POSs
-	public ArrayList<String> getSFPartOfSpeechsForNode(ArrayList<String> node) {
+	public ArrayList<String> getSFPartOfSpeechsForNode(ArrayList<String> node) throws JWNLException {
+		// analyzeURI(node.toString());
 		if (sfposs.containsKey(node)) return sfposs.get(node);
 		return new ArrayList<String>();
 	}
 	// Wordnet POSs
-	public ArrayList<POS> getWNPartOfSpeechsForNode(ArrayList<String> node) {
+	public ArrayList<POS> getWNPartOfSpeechsForNode(ArrayList<String> node) throws JWNLException {
+		// analyzeURI(node.toString());
 		if (wnposs.containsKey(node)) return wnposs.get(node);
 		return new ArrayList<POS>();
 	}
@@ -142,7 +144,7 @@ public class Dictionaries {
 				
 				
 				// Windows Initialization
-				String path ="C:\\Java\\jwnl14-rc2\\config\\file_properties.xml";
+				String path ="C:\\Users\\jeppa\\eclipse-workspace\\linguistic\\linguistic\\lib\\jwnl14-rc2\\config\\file_properties.xml";
 				 JWNL.initialize(new FileInputStream(path));
 
 

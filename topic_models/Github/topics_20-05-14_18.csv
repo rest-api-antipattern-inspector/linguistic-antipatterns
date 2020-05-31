@@ -1,0 +1,7 @@
+"Topic 0","issue","nullpatch","file",,,,,,,,,,,,
+"Topic 1","org","issue","organization","alert","repo",,,,,,,,,,
+"Topic 2","repo","project","organization","alert","repo",,,,,,,,,,
+"Topic 3","number","nullput","commit","contributor","repo",,,,,,,,,,
+"Topic 4","owner","user","null","repository","repo",,,,,,,,,,
+"Topic 5","pull","username","topic","vulnerability","repo",,,,,,,,,,
+"Topic 6","nullget","nullpost","tag","language","org",,,,,,,,,,

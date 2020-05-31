@@ -1,0 +1,12 @@
+***Antipattern***
+Count: 7
+POST  /threads/create.json [Singular last node with POST method.] 
+POST  /posts/create.json [Singular last node with POST method.] 
+POST  /forums/addModerator.json [Singular last node with POST method.] 
+POST  /posts/approve.json [Singular last node with POST method.] 
+POST  /posts/vote.json [Singular last node with POST method.] 
+POST  /threads/update.json [Singular last node with POST method.] 
+POST  /users/updateProfile.json [Singular last node with POST method.] 
+
+***Pattern***
+Count: 0

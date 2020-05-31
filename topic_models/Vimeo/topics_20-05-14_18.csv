@@ -1,0 +1,7 @@
+"Topic 0","likes","group","nullpatch",,,,,,,,,,,,
+"Topic 1","nullput","nulldelete","group","follow","null","likes","user",,,,,,,,
+"Topic 2","follower","word","tag","group","null","likes","user",,,,,,,,
+"Topic 3","follow","feed","tag","nulldelete","nullpatch","likes","user",,,,,,,,
+"Topic 4","nullget","category","user","video","word","channel","tutorial",,,,,,,,
+"Topic 5","channel","user","video","group","word","channel","tutorial",,,,,,,,
+"Topic 6","group","nullget","moderator","likes","tag","nulldelete","tutorial",,,,,,,,

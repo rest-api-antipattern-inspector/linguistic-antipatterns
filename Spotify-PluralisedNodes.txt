@@ -1,0 +1,5 @@
+***Antipattern***
+Count: 0
+
+***Pattern***
+Count: 0

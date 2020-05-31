@@ -1,0 +1,8 @@
+***Antipattern***
+Count: 3
+POST  /shorten [Singular last node with POST method.] 
+POST  /expand [Singular last node with POST method.] 
+POST  /bitlinks [Singular last node with POST method.] 
+
+***Pattern***
+Count: 0

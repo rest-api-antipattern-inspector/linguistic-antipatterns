@@ -1,0 +1,35 @@
+***Antipattern***
+Count: 0
+
+***Pattern***
+Count: 30
+/user/reposnull
+/users/{username}/reposnull
+/orgs/{org}/reposnull
+/repositoriesnull
+/repos/{owner}/{repo}null
+/repos/{owner}/{repo}/topicsnull
+/repos/{owner}/{repo}/topicsnull
+/repos/{owner}/{repo}/vulnerability-alertsnull
+/repos/{owner}/{repo}/contributorsnull
+/repos/{owner}/{repo}/languagesnull
+/repos/{owner}/{repo}/tagsnull
+/issuesnull
+/orgs/{org}/issuesnull
+/repos/{owner}/{repo}/issuesnull
+/repos/{owner}/{repo}/issues/{issue_number}null
+/repos/{owner}/{repo}/issuesnull
+/repos/{owner}/{repo}/issues/{issue_number}null
+/organizationsnull
+/users/{username}/orgsnull
+/orgs/{org}null
+/repos/{owner}/{repo}/pullsnull
+/repos/{owner}/{repo}/pulls/{pull_number}null
+/repos/{owner}/{repo}/pulls/{pull_number}null
+/repos/{owner}/{repo}/pulls/{pull_number}/commitsnull
+/repos/{owner}/{repo}/pulls/{pull_number}/filesnull
+/repos/{owner}/{repo}/projectsnull
+/orgs/{org}/projectsnull
+/users/{username}/projectsnull
+/repos/{owner}/{repo}/projectsnull
+/orgs/{org}/projectsnull

@@ -1,0 +1,26 @@
+***Antipattern***
+Count: 2
+/genelab/data/searchnull [search foud] 
+/searchnull [search foud] 
+
+***Pattern***
+Count: 19
+/cad.apinull
+/fireball.apinull
+/mdesign.apinull
+/nhats.apinull
+/sentry.apinull
+/naturalnull
+/natural/allnull
+/planetary/apodnull
+/neo/rest/v1/feednull
+/DONKI/CMEnull
+/EPIC/api/natural/imagesnull
+/cgi-bin/nstedAPI/nph-nstedAPInull
+/genelab/data/glds/files/{GLDS_STUDY_ID}null
+/mars-photos/api/v1/rovers/curiosity/photosnull
+/asset/{nasa_id}null
+/metadata/{nasa_id}null
+/captions/{nasa_id}null
+/techport/api/projects/17792null
+/tlenull

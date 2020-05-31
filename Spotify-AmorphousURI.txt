@@ -1,0 +1,33 @@
+***Antipattern***
+Count: 0
+
+***Pattern***
+Count: 28
+/albums/{id}null
+/albums/{id}/tracksnull
+/albumsnull
+/artists/{id}null
+/artists/{id}/albumsnull
+/artists/{id}/top-tracksnull
+/artists/{id}/related-artistsnull
+/artistsnull
+/categories/{id}null
+/categories/{id}/playlistsnull
+/browse/categoriesnull
+/browse/featured-playlistsnull
+/browse/new-releasesnull
+/recommendationsnull
+/episodesnull
+/playlists/{playlist_id}/followers/containsnull
+/playlists/{playlist_id}null
+/playlists/{playlist_id}/imagesnull
+/playlists/{playlist_id}/tracksnull
+/searchnull
+/shows/{id}null
+/showsnull
+/shows/{id}/episodesnull
+/audio-analysis/{id}null
+/audio-features/{id}null
+/audio-featuresnull
+/tracks/{id}null
+/tracksnull

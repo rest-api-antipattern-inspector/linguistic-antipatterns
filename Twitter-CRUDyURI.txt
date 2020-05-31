@@ -1,0 +1,64 @@
+***Antipattern***
+Count: 24
+/statuses/updatenull [update foud] 
+/favorites/createnull [create foud] 
+/statuses/shownull [show foud] 
+/favorites/destroynull [destroy foud] 
+/statuses/destroynull [destroy foud] 
+/lists/createnull [create foud] 
+/friendships/createnull [create foud] 
+/friendships/updatenull [update foud] 
+/blocks/createnull [create foud] 
+/mutes/users/createnull [create foud] 
+/lists/members/createnull [create foud] 
+/lists/subscribers/createnull [create foud] 
+/lists/shownull [show foud] 
+/lists/subscribers/shownull [show foud] 
+/friendships/shownull [show foud] 
+/users/searchnull [search foud] 
+/users/shownull [show foud] 
+/search/tweetsnull [search foud] 
+/geo/searchnull [search foud] 
+/lists/members/destroynull [destroy foud] 
+/lists/subscribers/destroynull [destroy foud] 
+/lists/destroynull [destroy foud] 
+/friendships/destroynull [destroy foud] 
+/blocks/destroynull [destroy foud] 
+
+***Pattern***
+Count: 35
+/statuses/retweetnull
+/favorites/listnull
+/statuses/lookupnull
+/statuses/oembednull
+/statuses/retweetsnull
+/statuses/retweeters/idsnull
+/statuses/retweets_of_menull
+/statuses/unretweetnull
+/lists/listnull
+/lists/membersnull
+/lists/membershipsnull
+/lists/ownershipsnull
+/lists/statusesnull
+/lists/subscribersnull
+/lists/subscriptionsnull
+/followers/idsnull
+/followers/listnull
+/friends/idsnull
+/friends/listnull
+/friendships/incomingnull
+/friendships/lookupnull
+/friendships/no_retweets/idsnull
+/friendships/outgoingnull
+/users/lookupnull
+/statuses/home_timelinenull
+/statuses/mentions_timelinenull
+/statuses/user_timelinenull
+/blocks/idsnull
+/blocks/listnull
+/mutes/users/idsnull
+/mutes/users/listnull
+/trends/availablenull
+/trends/closestnull
+/trends/placenull
+/geo/reverse_geocodenull
